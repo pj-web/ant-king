@@ -32,7 +32,9 @@ let gulp = require('gulp'),
 fileinclude = require('gulp-file-include'),
 group_media = require("gulp-group-css-media-queries"),
 rename = require("gulp-rename"),
-webp = require("gulp-webp");
+webp = require("gulp-webp"),
+webphtml = require("gulp-webp-html"),
+addSource = require('gulp-add-source-picture');
 const browserSync  = require('browser-sync').create();
 const concat       = require('gulp-concat');
 const uglify       = require('gulp-uglify-es').default;
@@ -56,6 +58,7 @@ function browsersync() {
 function html() {
     return src(path.src.html)
     .pipe(fileinclude())
+    .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browserSync.stream())
 }
@@ -95,6 +98,7 @@ function js() {
 
 function images() {
     return src(path.src.img)
+    .pipe(newer(path.build.img))
     .pipe(webp({
         quality: 70
     }))
