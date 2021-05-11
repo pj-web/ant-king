@@ -112,7 +112,6 @@ figcaption {
 }
 
 
-
 .wrapper {
 }
 
@@ -278,7 +277,6 @@ figcaption {
     background: linear-gradient(180deg, #3A2C2C 0%, #000000 100%);
 
     &__inner {
-        
         padding: 60px 0;
     }
 
@@ -362,6 +360,34 @@ figcaption {
         padding: 60px 0;
         color: #fff;
     }
+
+
+	&__price {
+        text-align: center;
+	}
+
+    &__price-new {
+        font-size: 58px;
+        font-weight: 700;
+        color: #ff310b;
+    }
+
+
+
+	&__price-old {
+        span {
+            font-size: 36px;
+            text-decoration: line-through;
+        }
+	}
+
+	
+	&__price-action {
+		}
+
+	&__timer {
+		}
+
 
     &__columns {
         margin: 40px 0 0 0;
@@ -512,9 +538,10 @@ figcaption {
 
 
 .how {
+    padding: 60px 0;
 
     &__inner {
-        padding: 60px 0;
+        
     }
 
     &__columns {
@@ -555,11 +582,18 @@ figcaption {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     &__benefits-image {
         margin: 0 40px 0 0;
+    }
+
+    &__benefits-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
     
 }
@@ -580,7 +614,68 @@ figcaption {
         justify-content: center;
         
     }
+
+    
+
 }
+
+.details {
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    background-size: cover;
+    background-attachment: fixed; 
+    padding: 60px 0;
+
+    &__inner {
+    }
+
+    &__official {
+        
+    }
+
+    &__official-1 {
+        
+    }
+
+    &__official-2 {
+    }
+
+    &__price {
+    }
+
+    &__pharmacy {
+    }
+
+    &__delivery {
+    }
+
+    &__photo {
+        text-align: center;
+    }
+}
+
+.composition {
+    padding: 60px 0;
+
+    &__inner {
+    }
+
+    &__items {
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+    &__item-section {
+    }
+}
+
+
+
 
 
 
@@ -688,7 +783,8 @@ figcaption {
 		}
 
 		&__columns {
-            flex-wrap: wrap;
+            flex-direction: column;
+            
 		}
 
 		&__column-1 {
@@ -699,6 +795,9 @@ figcaption {
 
 		&__column-2 {
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 		}
 
 		&__penis {
@@ -723,6 +822,11 @@ figcaption {
 
         &__inner {
             margin: 0 40px;
+            
+        }
+
+        &__price {
+            
         }
 
         &__columns {
@@ -743,6 +847,7 @@ figcaption {
         &__checkbox {
         }
 
+        
         &__column-2 {
             width: 100%;
 
@@ -805,13 +910,61 @@ figcaption {
         &__benefits-image {
             margin: 0 0px 0 0;
         }
+
+        
         
     }
+
+    .benefits {
+
+		&__inner {
+            margin: 0 40px;
+		}
+
+		&__list {
+		}
+}
+
+.details {
+    
+
+    &__inner {
+        margin: 0 40px;
+    }
+}
+
+.composition {
+    
+
+    &__inner {
+        margin: 0 40px;
+    }
+
+    &__items {
+    }
+
+    &__item {
+        
+    }
+
+    &__item-section {
+    }
+}
+
+.conditions {
+    &__inner {
+        margin: 0 40px;
+    }
+}
 
 }
 
 
 @media (max-width: 767px) {
+
+    .btn-consultation {
+        margin-bottom: 30px;
+    }
 
     h2 {
         font-size: 28px;
@@ -1144,7 +1297,37 @@ figcaption {
             max-width: 360px;
          }
         }
+
+      
         
+    }
+
+    .composition {
+    
+
+        &__inner {
+            
+        }
+    
+        &__items {
+        }
+
+        &__item {
+            margin-top: 20px;
+        }
+    
+        &__item:nth-child(odd) {
+            flex-direction: column-reverse;
+            
+        }
+
+        &__item:nth-child(even) {
+            flex-direction: column;
+            
+        }
+    
+        &__item-section {
+        }
     }
 
     
@@ -1394,6 +1577,13 @@ figcaption {
     }
 
     .buy {
+
+        &__price-new {
+            span {
+                font-size: 48px;
+            }
+        }
+
         &__column-1 {
             width: 100%;
         }
@@ -1480,6 +1670,39 @@ figcaption {
         }
         
     }
+
+    .composition {
+
+    
+
+        &__inner {
+            
+        }
+    
+        &__items {
+        }
+
+        &__item {
+
+        }
+    
+        &__item:nth-child(odd) {
+
+            
+        }
+
+        &__item:nth-child(even) {
+
+            
+        }
+    
+        &__item-section {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+
 
     
 }
