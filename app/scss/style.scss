@@ -524,14 +524,20 @@ figcaption {
 
 
 .btn-buy {
-    color: #fff;
+    display: inline-block;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     background: #ff310b;
     border-radius: 5px;
-    padding: 25px 41px 25px 41px;
     transition: all 0.5s ease 0s;
+
+    a {
+        display: block;
+        padding: 25px 41px 25px 41px;
+        color: #fff;
+
+    }
 
     &:hover {
         box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
@@ -543,15 +549,20 @@ figcaption {
     }
 }
 .btn-consultation {
-    color: #fff;
+    display: inline-block;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     border: 1px solid #FF310B;
     background: transparent;
     border-radius: 5px;
-    padding: 25px 20px 25px 20px;
     transition: all 0.5s ease 0s;
+
+    a {
+        display: block;
+        padding: 25px 30px 25px 30px;
+        color: #fff; 
+    }
 
     &:hover {
         background: #ff310b;
@@ -562,6 +573,28 @@ figcaption {
         transform: translate(0px, 3px);
     }
 
+}
+
+.btn-buy-form {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    background: #ff310b;
+    border-radius: 5px;
+    transition: all 0.5s ease 0s;
+    padding: 25px 41px 25px 41px;
+    color: #fff;
+    margin-bottom: 20px;
+
+    &:hover {
+        box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+        transform: translate(0px, -3px);
+    }
+    &:active {
+        box-shadow: none;
+        transform: translate(0px, 3px);
+    }
 }
 
 
@@ -832,21 +865,38 @@ ul li.footer__item::before {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+
+    
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.open &__content {
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+    }
 
     &__body {
-        min-height: 100vh;
+        min-height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.8 ease 0s;
        
     }
 
     &__content {
         background-color: #fff;
-        width: 50%;
-        margin: 80px auto;
+        max-width: 800px;
         padding: 10px 10px 20px 10px;
         position: relative;
+        transition: all 0.8 ease 0s;
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
         
     }
 
@@ -861,8 +911,13 @@ ul li.footer__item::before {
     &__buy-form {
         text-align: center;
         h3 {
-            margin: 0;
+            margin: 20px;
         }
+
+        p {
+            margin: 20px;
+        }
+
         & input[type="text"] { 
             width: 80%;
             height: 60px;

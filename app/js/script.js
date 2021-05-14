@@ -69,3 +69,140 @@ if (iconMenu) {
 // counts();
 
 // setInterval(counts, 1000);
+
+const popupLinks = document.querySelectorAll('.popup-link');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll(".lock-padding");
+
+let unlock = true;
+
+const timeout = 800;
+
+if (popupLinks.length > 0) {
+    for (let index = 0; index < popupLinks.length; index++) {
+        const popupLink = popupLinks[index];
+        popupLink.addEventListener("click", function (e) {
+            const popupName = popupLink.getAttribute('href').replace('#', '');
+            const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
+            e.preventDefault();
+        });
+    }
+}
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        const el = popupCloseIcon[index];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.popup'));
+            e.preventDefault();
+        });
+    }
+}
+
+function popupOpen(curentPopup) {
+    if (curentPopup && unlock) {
+        const popupActive = document.querySelector('.popup.open');
+        if (popupActive) {
+            popupClose(popupActive, false);
+        } else {
+            bodyLock();
+        }
+        curentPopup.classList.add('open');
+        curentPopup.addEventListener("click", function (e) {
+        if (!e.target.closest('.popup__content')) {
+            popupClose(e.target.closest('.popup'));
+        }
+    });
+    }
+}
+
+function popupClose(popupActive, doUnlock = true) {
+    if (unlock) {
+        popupActive.classList.remove('open');
+        if (doUnlock) {
+            bodyUnLock();
+        }
+    }
+}
+
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
+
+    if (lockPadding.length > 0) {
+    for (let index = 0; index < lockPadding.length; index++) {
+        const el = lockPadding[index];
+        el.style.paddingRight = lockPaddingValue;
+        }
+    }
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('_lock');
+    
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+        }, timeout);
+    }
+
+function bodyUnLock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0) {
+        for (let index = 0; index < lockPadding.length; index++) {
+            const el = lockPadding[index];
+            el.style.paddingRight = '0px';
+        }
+    }
+        body.style.paddingRight = '0px';
+        body.classList.remove('_lock');
+    }, timeout);
+
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+}
+
+document.addEventListener('keydown', function (e) {
+    if (e.which === 27) {
+        const popupActive = document.querySelector('.popup.open');
+        popupClose(popupActive);
+    }
+});
+
+//<![CDATA[
+    var remain_bv   = 80768;
+    function parseTime_bv(timestamp){
+        if (timestamp < 0) timestamp = 0;
+     
+        var day = Math.floor( (timestamp/60/60) / 24);
+        var hour = Math.floor(timestamp/60/60);
+        var mins = Math.floor((timestamp - hour*60*60)/60);
+        var secs = Math.floor(timestamp - hour*60*60 - mins*60); 
+        var left_hour = Math.floor( (timestamp - day*24*60*60) / 60 / 60 );
+     
+        $('span.countdown__item-day').text(day);
+        $('span.countdown__item-hour').text(left_hour);
+     
+        if(String(mins).length > 1)
+            $('span.countdown__item-minute').text(mins);
+        else
+            $('span.countdown__item-minute').text("0" + mins);
+        if(String(secs).length > 1)
+            $('span.countdown__item-second').text(secs);
+        else
+            $('span.countdown__item-second').text("0" + secs);
+         
+    }
+     
+    jQuery(function() {
+        setInterval(function(){
+            remain_bv = remain_bv - 1;
+            parseTime_bv(remain_bv);
+            if(remain_bv <= 0){
+                alert('Hello');
+            }
+        }, 1000);
+    });
+    //]]>
+
+

@@ -561,16 +561,21 @@ figcaption {
 }
 
 .btn-buy {
-  color: #fff;
+  display: inline-block;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   background: #ff310b;
   border-radius: 5px;
-  padding: 25px 41px 25px 41px;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+}
+
+.btn-buy a {
+  display: block;
+  padding: 25px 41px 25px 41px;
+  color: #fff;
 }
 
 .btn-buy:hover {
@@ -590,17 +595,22 @@ figcaption {
 }
 
 .btn-consultation {
-  color: #fff;
+  display: inline-block;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   border: 1px solid #FF310B;
   background: transparent;
   border-radius: 5px;
-  padding: 25px 20px 25px 20px;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+}
+
+.btn-consultation a {
+  display: block;
+  padding: 25px 30px 25px 30px;
+  color: #fff;
 }
 
 .btn-consultation:hover {
@@ -610,6 +620,37 @@ figcaption {
 }
 
 .btn-consultation:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0px, 3px);
+      -ms-transform: translate(0px, 3px);
+          transform: translate(0px, 3px);
+}
+
+.btn-buy-form {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  background: #ff310b;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  padding: 25px 41px 25px 41px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.btn-buy-form:hover {
+  -webkit-box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+          box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+  -webkit-transform: translate(0px, -3px);
+      -ms-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
+}
+
+.btn-buy-form:active {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: translate(0px, 3px);
@@ -827,10 +868,26 @@ ul li.footer__item::before {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
 }
 
 .popup__body {
-  min-height: 100vh;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,14 +897,22 @@ ul li.footer__item::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: all 0.8 ease 0s;
+  -o-transition: all 0.8 ease 0s;
+  transition: all 0.8 ease 0s;
 }
 
 .popup__content {
   background-color: #fff;
-  width: 50%;
-  margin: 80px auto;
+  max-width: 800px;
   padding: 10px 10px 20px 10px;
   position: relative;
+  -webkit-transition: all 0.8 ease 0s;
+  -o-transition: all 0.8 ease 0s;
+  transition: all 0.8 ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 
 .popup__close {
@@ -862,7 +927,11 @@ ul li.footer__item::before {
 }
 
 .popup__buy-form h3 {
-  margin: 0;
+  margin: 20px;
+}
+
+.popup__buy-form p {
+  margin: 20px;
 }
 
 .popup__buy-form input[type="text"] {
