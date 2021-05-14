@@ -40,6 +40,17 @@ h2 {
     margin: 0 0 20px 0;
 }
 
+h2.anim-items {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    &.active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
 h3 {
     font-size: 24px;
     text-align: center;
@@ -47,12 +58,37 @@ h3 {
     margin: 40px 0 20px 0;
 }
 
+h3.anim-items {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    &.active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
 h4 {
     font-weight: 700;
 }
 
+
+
 p {
     margin: 0 0 20px 0;
+}
+
+p.anim-items {
+    margin: 0 0 20px 0;
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    &.active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
 }
 
 blockquote {
@@ -84,8 +120,41 @@ blockquote {
 ul {
     font-size: 18px;
     line-height: 22px;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
 }
+
+ul.hero__list {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 40px 0;
+
+    // li {
+    //     transform: translate(-120%, 0px);
+    //     transition: all 0.8 ease 0s;
+
+    // }
+
+    // &.active li {
+    //     transform: translate(0px, 0px);
+    // }
+
+    // &.active {
+    //     li {
+    //         @for $var from 1 to 6 {
+    //             $dalay: $var * 0.2;
+    //             &:nth-child(#{$var}) {
+    //                 @if $var==1 {
+    //                     transition: transform 0.8s ease 0s;
+    //                 } @else {
+    //                     transition: transform 0.8s ease #{$delay + s};
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+
 
 li {
     padding: 0 0 0 35px;
@@ -109,6 +178,18 @@ figure {
 
 figcaption {
     font-size: 12px;
+}
+
+figure.anim-items {
+    transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+
+    &.active {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        opacity: 1;
+    }
+    
 }
 
 .countdown {
@@ -143,6 +224,7 @@ figcaption {
 
 .wrapper {
 }
+
 
 .container {
     max-width: 1200px;
@@ -284,7 +366,15 @@ figcaption {
             line-height: 117px;
             letter-spacing: -0.02em;
             text-transform: uppercase;
-            margin: 0 0 40px 0;
+            margin: 0 0 20px 0;
+            transform: translate(0px, 120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
+
+            &.active {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
 		}
 
 		&__sub-header {
@@ -292,6 +382,15 @@ figcaption {
             line-height: 44px;
             letter-spacing: -0.02em;
             margin: 0 0 40px 0;
+            transform: translate(0px, 120%);
+            opacity: 0;
+            transition: all 0.8s ease 0s;
+
+            &.active {
+                transform: translate(0px, 0px);
+                opacity: 1;
+                transition: all 0.8s ease 0.4s;
+            }
 		}
 
 		
@@ -317,7 +416,14 @@ figcaption {
 
     &__column-1 {
         width: 45%;
-        
+        transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+
+        &.active {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            opacity: 1;
+        }
         
     }
 
@@ -356,6 +462,17 @@ figcaption {
     &__why {
         display: flex;
         align-items: center;
+    }
+
+    &__why-2 {
+        transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+
+        &.active {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            opacity: 1;
+        }
     }
 
     &__item {
@@ -398,8 +515,8 @@ figcaption {
     &__price-new {
         span {
             font-size: 58px;
-        font-weight: 700;
-        color: #ff310b;
+            font-weight: 700;
+            color: #ff310b;
         }
         
     }

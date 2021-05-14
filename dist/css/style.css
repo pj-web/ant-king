@@ -104,11 +104,45 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+h2.anim-items {
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+h2.anim-items.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 h3 {
   font-size: 24px;
   text-align: center;
   font-weight: 700;
   margin: 40px 0 20px 0;
+}
+
+h3.anim-items {
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+h3.anim-items.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 h4 {
@@ -117,6 +151,24 @@ h4 {
 
 p {
   margin: 0 0 20px 0;
+}
+
+p.anim-items {
+  margin: 0 0 20px 0;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+p.anim-items.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 blockquote {
@@ -147,7 +199,13 @@ blockquote::before {
 ul {
   font-size: 18px;
   line-height: 22px;
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
+}
+
+ul.hero__list {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 0 40px 0;
 }
 
 li {
@@ -172,6 +230,23 @@ figure {
 
 figcaption {
   font-size: 12px;
+}
+
+figure.anim-items {
+  -webkit-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+      -ms-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+          transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+
+figure.anim-items.active {
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+  opacity: 1;
 }
 
 .countdown {
@@ -338,7 +413,21 @@ figcaption {
   line-height: 117px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero__header.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .hero__sub-header {
@@ -346,6 +435,23 @@ figcaption {
   line-height: 44px;
   letter-spacing: -0.02em;
   margin: 0 0 40px 0;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero__sub-header.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
 }
 
 .hero__image {
@@ -375,6 +481,20 @@ figcaption {
 
 .description__column-1 {
   width: 45%;
+  -webkit-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+      -ms-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+          transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+
+.description__column-1.active {
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+  opacity: 1;
 }
 
 .description__column-2 {
@@ -414,6 +534,23 @@ figcaption {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.description__why-2 {
+  -webkit-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+      -ms-transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+          transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+
+.description__why-2.active {
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+  opacity: 1;
 }
 
 .description__item {
