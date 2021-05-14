@@ -396,9 +396,12 @@ figcaption {
 	}
 
     &__price-new {
-        font-size: 58px;
+        span {
+            font-size: 58px;
         font-weight: 700;
         color: #ff310b;
+        }
+        
     }
 
 
@@ -560,7 +563,7 @@ figcaption {
 
     a {
         display: block;
-        padding: 25px 30px 25px 30px;
+        padding: 25px 20px 25px 20px;
         color: #fff; 
     }
 
@@ -960,8 +963,10 @@ ul li.footer__item::before {
     }
 
     &__price-new {
-        font-size: 36px;
-        text-align: center;
+        span {
+            font-size: 36px;
+            line-height: 38px;
+        }
     }
 
     &__price-old {
@@ -1005,10 +1010,6 @@ ul li.footer__item::before {
 
     &__item {
     }
-}
-.offername {
-}
-.btn-buy {
 }
 
 
@@ -1305,6 +1306,12 @@ ul li.footer__item::before {
         }
     }
 
+    .popup {
+        &__content {
+            max-width: 600px;
+        }
+    }
+
 }
 
 
@@ -1312,9 +1319,9 @@ ul li.footer__item::before {
 
     .countdown {
         &__item{
-            min-width: 80px;
+            min-width: 60px;
             border-radius: 10%;
-            padding: 10px;
+            padding: 5px;
             margin: 0 5px;
     
             span {
@@ -1322,6 +1329,10 @@ ul li.footer__item::before {
                 font-weight: 700;
             }
         }
+    }
+
+    .btn-buy {
+        margin: 30px 0px 20px 0;
     }
 
     .btn-consultation {
@@ -1439,7 +1450,7 @@ ul li.footer__item::before {
     
         &__item {
             margin: 0 0 60px 0px;
-            // padding: 0 0 0 0px;
+            padding: 0 0 0 0px;
 
             & + .menu__item {
                 padding: 0 0 0 0px;
@@ -1742,6 +1753,37 @@ ul li.footer__item::before {
            
     }
 
+    .popup {
+        &__content {
+            max-width: 360px;
+        }
+
+        &__buy-form {
+            h3 {
+                margin: 5px;
+            }
+    
+            p {
+                margin: 5px;
+            }
+        }
+        
+    }
+
+    .buy {
+    
+        &__price-new {
+        }
+
+        &__price-old {
+        }
+
+        &__checkbox {
+            font-size: 8px;
+            line-height: 10px;
+        }
+}
+
     
 }
 
@@ -1753,10 +1795,16 @@ ul li.footer__item::before {
     }
 
     .countdown {
+
+        h3 {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
         &__item{
-            min-width: 60px;
+            min-width: 40px;
             border-radius: 10%;
-            padding: 5px;
+            padding: 3px 0px;
             margin: 0 5px;
             font-size: 12px;
     
@@ -2135,6 +2183,108 @@ ul li.footer__item::before {
             margin: 0;
         }
     }
+
+
+    .popup-order {
+    }
+    .popup {
+    
+            &__body {
+            }
+    
+            &__content {
+                max-width: 260px;
+            }
+    
+            &__close {
+            }
+    
+            &__buy-form {
+                h3 {
+                    margin: 0px;
+                }
+        
+                p {
+                    margin: 0px;
+                }
+
+                & input[type="text"] { 
+                    
+                    height: 40px;
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+        
+                & input[type="tel"]{ 
+                    
+                    height: 40px;
+                    font-size: 20px;
+                    line-height: 22px;
+                }
+            }
+    
+            &__price-new {
+                span {
+                    font-size: 24px;
+                    line-height: 26px;
+                }
+                
+            }
+            
+            &__price-old {
+                span {
+                    font-size: 18px;
+                    text-decoration: line-through;
+                }
+            }
+    
+            &__countdown {
+                .countdown__items span {
+                    font-size: 20px;
+                }
+            }
+    }
+    .close-popup {
+    }
+    .buy {
+    
+            &__price-new {
+            }
+    
+            &__price-old {
+            }
+    
+            &__checkbox {
+                font-size: 8px;
+                line-height: 10px;
+            }
+    }
+    .countdown {
+    
+            &__items {
+            }
+    
+            &__item {
+            }
+    
+            &__item-day {
+            }
+    
+            &__item-hour {
+            }
+    
+            &__item-minute {
+            }
+    
+            &__item-second {
+            }
+    }
+    .offername {
+    }
+    .btn-buy-form {
+        padding: 10px;
+    }
+    
 
 
     

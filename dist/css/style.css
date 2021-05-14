@@ -448,7 +448,7 @@ figcaption {
   text-align: center;
 }
 
-.buy__price-new {
+.buy__price-new span {
   font-size: 58px;
   font-weight: 700;
   color: #ff310b;
@@ -609,7 +609,7 @@ figcaption {
 
 .btn-consultation a {
   display: block;
-  padding: 25px 30px 25px 30px;
+  padding: 25px 20px 25px 20px;
   color: #fff;
 }
 
@@ -972,9 +972,9 @@ ul li.footer__item::before {
   margin-bottom: 20px;
 }
 
-.popup__price-new {
+.popup__price-new span {
   font-size: 36px;
-  text-align: center;
+  line-height: 38px;
 }
 
 .popup__price-old {
@@ -1201,19 +1201,27 @@ ul li.footer__item::before {
   .conditions__inner {
     margin: 0 40px;
   }
+
+  .popup__content {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 767px) {
   .countdown__item {
-    min-width: 80px;
+    min-width: 60px;
     border-radius: 10%;
-    padding: 10px;
+    padding: 5px;
     margin: 0 5px;
   }
 
   .countdown__item span {
     font-size: 24px;
     font-weight: 700;
+  }
+
+  .btn-buy {
+    margin: 30px 0px 20px 0;
   }
 
   .btn-consultation {
@@ -1332,6 +1340,7 @@ ul li.footer__item::before {
 
   .menu__item {
     margin: 0 0 60px 0px;
+    padding: 0 0 0 0px;
   }
 
   .menu__item + .menu__item {
@@ -1567,6 +1576,23 @@ ul li.footer__item::before {
   .footer__copywright-logo {
     margin-right: 40px;
   }
+
+  .popup__content {
+    max-width: 360px;
+  }
+
+  .popup__buy-form h3 {
+    margin: 5px;
+  }
+
+  .popup__buy-form p {
+    margin: 5px;
+  }
+
+  .buy__checkbox {
+    font-size: 8px;
+    line-height: 10px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -1575,10 +1601,15 @@ ul li.footer__item::before {
     line-height: 26px;
   }
 
+  .countdown h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
   .countdown__item {
-    min-width: 60px;
+    min-width: 40px;
     border-radius: 10%;
-    padding: 5px;
+    padding: 3px 0px;
     margin: 0 5px;
     font-size: 12px;
   }
@@ -1881,5 +1912,52 @@ ul li.footer__item::before {
 
   .conditions__buy-form {
     margin: 0;
+  }
+
+  .popup__content {
+    max-width: 260px;
+  }
+
+  .popup__buy-form h3 {
+    margin: 0px;
+  }
+
+  .popup__buy-form p {
+    margin: 0px;
+  }
+
+  .popup__buy-form input[type="text"] {
+    height: 40px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .popup__buy-form input[type="tel"] {
+    height: 40px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .popup__price-new span {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .popup__price-old span {
+    font-size: 18px;
+    text-decoration: line-through;
+  }
+
+  .popup__countdown .countdown__items span {
+    font-size: 20px;
+  }
+
+  .buy__checkbox {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .btn-buy-form {
+    padding: 10px;
   }
 }
