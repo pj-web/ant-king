@@ -230,7 +230,11 @@ document.addEventListener('keydown', function (e) {
                     animItem.classList.add('active');                    
                 } else {
                     if (!animItem.classList.contains('anim-hide')) {
-                        animItem.classList.remove('.active');
+                        animItem.classList.remove('active');
+                    } else {
+                        if (isMobile.any()) {
+                            animItem.classList.remove('anim-items');
+                        }
                     }
                 }
             }
