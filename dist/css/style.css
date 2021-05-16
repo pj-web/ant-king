@@ -606,6 +606,153 @@ figure.anim-items.active {
   width: 50%;
 }
 
+.hero-pages {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1E1010), to(#000000));
+  background: -o-linear-gradient(top, #1E1010 0%, #000000 100%);
+  background: linear-gradient(180deg, #1E1010 0%, #000000 100%);
+  position: relative;
+  padding: 40px 0 20px;
+}
+
+.hero-pages::before {
+  content: 'Ant King';
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  font-weight: 800;
+  font-size: 240px;
+  line-height: 366px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+.hero-pages__content {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 35vh;
+}
+
+.hero-pages__text {
+  width: 50%;
+}
+
+.hero-pages__text button.btn-buy {
+  margin-right: 5px;
+}
+
+.hero-pages__header {
+  font-weight: 800;
+  font-size: 74px;
+  line-height: 100px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 0px 0;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero-pages__header.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.hero-pages__description {
+  font-size: 16px;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  transition: all 0.8s ease 0.2s;
+}
+
+.hero-pages__description.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.hero-pages__sub-header {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  margin: 0 0 80px 0;
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero-pages__sub-header.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
+}
+
+.hero-pages__btn-1 {
+  margin-bottom: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero-pages__btn-1.active {
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
+}
+
+.hero-pages__btn-2 {
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.hero-pages__btn-2.active {
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0.4s;
+  -o-transition: all 0.8s ease 0.4s;
+  transition: all 0.8s ease 0.4s;
+}
+
+.hero-pages__image {
+  width: 50%;
+}
+
+.hero-pages__image img {
+  margin-top: 20px;
+  max-width: 350px;
+}
+
 .description {
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#3A2C2C), to(#000000));
@@ -856,9 +1003,9 @@ figure.anim-items.active {
   border: 1px solid #FF310B;
   background: transparent;
   border-radius: 5px;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .btn-consultation a {
