@@ -33,6 +33,14 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
+h1 {
+    font-size: 42px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
 h2 {
     font-size: 36px;
     text-align: center;
@@ -74,7 +82,7 @@ h4 {
 }
 
 div.anim-items {
-    transform: translate(0px, 120%);
+    transform: translate(0px, 80%);
     opacity: 0;
     transition: all 0.8s ease 0s;
 
@@ -446,9 +454,16 @@ figure.anim-items {
 		&__text {
             width: 50%;
 
+            h1 {
+                text-align: left;
+                font-weight: 400;
+            }
+
             & button.btn-buy {
                 margin-right: 5px;
             }
+
+
 		}
 
 		&__header {
@@ -508,21 +523,22 @@ figure.anim-items {
 		&__image {
             width: 50%;
             
+            
 		}
 }
 
 .hero-pages {
     background: linear-gradient(180deg, #1E1010 0%, #000000 100%);
     position: relative;
-    padding: 40px 0 20px;
+    padding: 0px 0 0px;
 
     &::before {
-        content: 'Ant King';
+        content: 'Ant';
         position: absolute;
-        top: -10%;
+        top: 0%;
         left: 5%;
         font-weight: 800;
-        font-size: 240px;
+        font-size: 200px;
         line-height: 366px;
         letter-spacing: 0.01em;
         text-transform: uppercase;
@@ -530,19 +546,19 @@ figure.anim-items {
         pointer-events: none;
     }
 
-    // &::after {
-    //     content: 'King';
-    //     position: absolute;
-    //     bottom: -10%;
-    //     right: 15%;
-    //     font-weight: 800;
-    //     font-size: 240px;
-    //     line-height: 366px;
-    //     letter-spacing: 0.01em;
-    //     text-transform: uppercase;
-    //     color: rgba(255, 255, 255, 0.02);
-    //     pointer-events: none;
-    // }
+    &::after {
+        content: 'King';
+        position: absolute;
+        bottom: -10%;
+        right: 10%;
+        font-weight: 800;
+        font-size: 200px;
+        line-height: 366px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.02);
+        pointer-events: none;
+    }
     
 
     
@@ -552,7 +568,8 @@ figure.anim-items {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-height: 35vh;
+            // max-height: 40vh;
+            margin: 0 0px;
            
             
 
@@ -638,7 +655,7 @@ figure.anim-items {
             width: 50%;
 
             img {
-                margin-top: 20px;
+                // margin-top: 20px;
                 max-width: 350px;
             }
             
@@ -899,12 +916,13 @@ figure.anim-items {
     }
 
     &:hover {
-        box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+        box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.8);
         transform: translate(0px, -3px);
     }
     &:active {
         box-shadow: none;
-        transform: translate(0px, 3px);
+        color: #ff310b;
+        background-color: #fff;
     }
 }
 .btn-consultation {
@@ -1117,43 +1135,43 @@ figure.anim-items {
         align-items: center;
         justify-content: space-around;
 
-        &:nth-child(odd) {
-            transform: translate(-120%, 0px);
-            opacity: 0;
-            transition: all 0.8s ease 0s;
+        // &:nth-child(odd) {
+        //     transform: translate(-120%, 0px);
+        //     opacity: 0;
+        //     transition: all 0.8s ease 0s;
                 
-        }
+        // }
 
-        &:nth-child(even) {
-            transform: translate(120%, 0px);
-            opacity: 0;
-            transition: all 0.8s ease 0s;
-        }
+        // &:nth-child(even) {
+        //     transform: translate(120%, 0px);
+        //     opacity: 0;
+        //     transition: all 0.8s ease 0s;
+        // }
 
-        &.active:nth-child(1) {
-            transition: all 0.8s ease 0.2s;
-        }
+        // &.active:nth-child(1) {
+        //     transition: all 0.8s ease 0.2s;
+        // }
 
-        &.active:nth-child(2) {
-            transition: all 0.8s ease 0.4s;
-        }
+        // &.active:nth-child(2) {
+        //     transition: all 0.8s ease 0.4s;
+        // }
 
-        &.active:nth-child(3) {
-            transition: all 0.8s ease 0.6s;
-        }
+        // &.active:nth-child(3) {
+        //     transition: all 0.8s ease 0.6s;
+        // }
 
-        &.active:nth-child(4) {
-            transition: all 0.8s ease 0.8s;
-        }
+        // &.active:nth-child(4) {
+        //     transition: all 0.8s ease 0.8s;
+        // }
 
-        &.active:nth-child(5) {
-            transition: all 0.8s ease 1s;
-        }
+        // &.active:nth-child(5) {
+        //     transition: all 0.8s ease 1s;
+        // }
 
-        &.active {
-            transform: translate(0px, 0px);
-            opacity: 1;
-            }
+        // &.active {
+        //     transform: translate(0px, 0px);
+        //     opacity: 1;
+        //     }
         }
 
     
@@ -1199,29 +1217,6 @@ figure.anim-items {
 
     &__buy-price-old {
     }
-}
-
-.buy {
-
-    &__price-new {
-    }
-
-    &__price-old {
-    }
-
-    &__form {
-        
-    }
-
-    &__button {
-    }
-
-    &__checkbox {
-    }
-}
-.offername {
-}
-.btn-buy {
 }
 
 
@@ -1318,6 +1313,7 @@ ul li.footer__item::before {
         background-color: #fff;
         max-width: 800px;
         padding: 10px 10px 20px 10px;
+        margin: 60px 0 0 0;
         position: relative;
         transition: all 0.8 ease 0s;
         opacity: 0;
@@ -1409,31 +1405,136 @@ ul li.footer__item::before {
         }
     }
 }
-.buy {
+// ---------------------------------------
 
-    &__price-new {
+.doctors {
+    padding: 60px 0px;
+    color: #fff;
+    background: linear-gradient(180deg, #3A2C2C 0%, #000000 100%);
+
+    &__inner {
+        
     }
 
-    &__price-old {
+    &__items {
+    
     }
 
-    &__form {
+    &__item {
+        color: #000;
+        display: flex;
+        background-color: #C4C4C4;
+        padding: 10px;
+        margin: 20px 20px 40px 20px;
+        border-radius: 15px;
     }
 
-    &__button {
+    &__avatar {
+        margin: 10px 10px 10px 10px;
+        img {
+            border-radius: 50%;
+        }
     }
 
-    &__checkbox {
+    &__text {
+        margin: 10px 10px 10px 30px;
+        h3 {
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    &__name {
+        padding: 0 0 0 20px;
+    }
+
+    &__specialty {
+        padding: 0 0 0 20px;
+    }
+
+    &__conclusion {
+        background-color: #fff;
+        padding: 20px 20px 10px 20px;
+        margin: 10px 10px 10px 0px;
+        border-radius: 15px;
+    }
+
+    &__btn {
+        text-align: right;
+        margin: 20px 20px 0 0;
+
+        a {
+            color: #fff;
+            background-color: #ff310b;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            transition: all 0.5s ease 0s;
+
+            &:hover {
+                box-shadow: 5px 5px 20px rgba(255, 49, 11, 0.8);
+            }
+            &:active {
+                box-shadow: none;
+                color: #ff310b;
+                background-color: #fff;
+            }
+        }
     }
 }
-.countdown {
+
+.customers {
+    padding: 60px 0px;
+    color: #fff;
+    background: linear-gradient(180deg, #3A2C2C 0%, #000000 100%);
+
+    &__inner {
+    }
 
     &__items {
     }
 
     &__item {
+        color: #000;
+        display: flex;
+        background-color: #C4C4C4;
+        padding: 10px;
+        margin: 20px 20px 40px 20px;
+        border-radius: 15px;
+    }
+
+    &__avatar {
+        margin: 10px 10px 10px 10px;
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        margin: 10px 10px 10px 30px;
+        h3 {
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    &__name {
+        padding: 0 0 0 20px;
+    }
+
+    &__age {
+        padding: 0 0 0 20px;
+    }
+
+    &__testimonial {
+        background-color: #fff;
+        padding: 20px 20px 10px 20px;
+        margin: 10px 10px 10px 0px;
+        border-radius: 15px;
     }
 }
+
+
+// ---------------------------------------
 
 
 
@@ -1507,6 +1608,10 @@ ul li.footer__item::before {
             &__text {
                 width: 100%;
                 text-align: center;
+
+                h1 {
+                    text-align: center;
+                }
                 
     
                 & button.btn-buy {
@@ -1536,6 +1641,79 @@ ul li.footer__item::before {
                 }
         }
     }
+
+    .hero-pages {
+        
+        
+
+        &::before {
+            font-size: 120px;
+            top: 0%;
+        }
+
+        &::after {
+            font-size: 120px;
+            bottom: -20%;
+        }
+
+		&__content {
+            margin: 0 40px;
+            padding: 0 0 10px 0;
+		}
+
+		&__text {
+		}
+
+		&__header {
+            font-size: 34px;
+		}
+
+		&__description {
+            display: block;
+            font-size: 14px;
+		}
+
+		&__sub-header {
+            font-size: 14px;
+		}
+
+		&__image {
+            img {
+                max-width: 250px;
+                margin-top: 20px;
+            }
+		}
+
+		&__buttons {
+		}
+
+		&__btn-1 {
+            a {
+                padding: 15px 28px 15px 28px;
+                font-size: 16px;
+            }
+		}
+
+		&__btn-2 {
+            a {
+                padding: 15px 10px 15px 10px;
+                font-size: 16px;
+            }
+		}
+}
+.container {
+}
+.anim-items {
+}
+.anim-hide {
+}
+.btn-buy {
+}
+.popup-link {
+}
+.btn-consultation {
+}
+
 
     .description {
 
@@ -1698,7 +1876,6 @@ ul li.footer__item::before {
     
 
     &__inner {
-        margin: 0 40px;
     }
 
     &__items {
@@ -1734,6 +1911,60 @@ ul li.footer__item::before {
             max-width: 600px;
         }
     }
+
+    //------------------------------
+
+    .doctors {
+        padding: 40px 0px;
+
+        &__inner {
+            margin: 0 40px;
+        }
+
+        &__item {
+            display: block;
+            
+        }
+
+        &__avatar {
+            padding: 0px 0 0 25px;
+        }
+        &__btn {
+            margin: 20px 10px 10px 0;
+        }
+    }
+
+    .customers {
+        padding: 40px 0px;
+
+		&__inner {
+            margin: 0 40px;
+		}
+
+		&__items {
+		}
+
+		&__item {
+            display: block;
+		}
+
+		&__avatar {
+            padding: 0px 0 0 25px;
+		}
+
+		&__text {
+		}
+
+		&__name {
+		}
+
+		&__age {
+		}
+
+		&__testimonial {
+		}
+}
+
 
 }
 
@@ -1912,6 +2143,8 @@ ul li.footer__item::before {
             &__text {
                 width: 100%;
                 text-align: center;
+
+                
                 
     
                 & button.btn-buy {
@@ -1959,6 +2192,73 @@ ul li.footer__item::before {
                 
             }
     }
+    
+    .hero-pages {
+        padding: 30px 0 0 0;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
+		&__content {
+            flex-wrap: wrap;
+            align-items:flex-start;
+            // min-height: 55vh;
+		}
+
+		&__text {
+            width: 50%;
+		}
+
+		&__header {
+            font-size: 28px;
+		}
+
+		&__description {
+           
+            
+		}
+
+		&__sub-header {
+		}
+
+		&__image {
+            width: 50%;
+            img {
+                max-width: 200px;
+            }
+		}
+
+		&__buttons {
+            width: 100%;
+            text-align: center;
+		}
+
+		&__btn-1 {
+            margin: 0px 0 10px 0;
+		}
+
+		&__btn-2 {
+            margin: 0px 0 10px 0;
+		}
+}
+.container {
+}
+.anim-items {
+}
+.anim-hide {
+}
+.btn-buy {
+}
+.popup-link {
+}
+.btn-consultation {
+}
+
 
     .description {
 
@@ -2207,14 +2507,71 @@ ul li.footer__item::before {
         }
 }
 
+//-----------------------
+
+    .doctors {
+
+        &__inner {
+            margin: 0 20px;
+        }
+
+        &__item {
+            margin: 10px 0px 20px 0px;
+        }
+
+        &__avatar {
+            padding: 0;
+        }
+        &__text {
+            margin: 0;
+        }
+        &__conclusion {
+            margin: 10px 0 0 0;
+        }
+        &__btn {
+            text-align: center;
+        }
+    }
+
+    .customers {
+
+		&__inner {
+            margin: 0 20px;
+		}
+
+		&__items {
+		}
+
+		&__item {
+		}
+
+		&__avatar {
+            padding: 0;
+		}
+
+		&__text {
+            margin: 0;
+		}
+
+		&__name {
+		}
+
+		&__age {
+		}
+
+		&__testimonial {
+            margin: 10px 0 0 0;
+		}
+}
+
+
+
     
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
     body {
-        transform: translate(0px, 0px) matrix(1, 0, 0, 1, 0, 0);
-        opacity: 1;
     }
 
     h2 {
@@ -2439,6 +2796,62 @@ ul li.footer__item::before {
             }
     }
 
+    .hero-pages {
+        padding: 30px 0 0 0;
+
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+
+		&__content {
+            flex-wrap: wrap;
+            // min-height: 60vh;
+		}
+
+		&__text {
+            width: 50%;
+		}
+
+		&__header {
+            font-size: 28px;
+		}
+
+		&__description {
+            font-size: 12px;
+            margin: 0;
+           
+            
+		}
+
+		&__sub-header {
+            font-size: 12px;
+		}
+
+		&__image {
+            width: 50%;
+            img {
+                max-width: 180px;
+            }
+		}
+
+		&__buttons {
+            width: 100%;
+            text-align: center;
+		}
+
+		&__btn-1 {
+            margin: 0px 0 10px 0;
+		}
+
+		&__btn-2 {
+            margin: 0px 0 20px 0;
+		}
+}
+
     .description {
 
         &__columns {
@@ -2621,7 +3034,7 @@ ul li.footer__item::before {
             }
     
             &__content {
-                max-width: 260px;
+                max-width: 300px;
             }
     
             &__close {
@@ -2712,10 +3125,49 @@ ul li.footer__item::before {
     .btn-buy-form {
         padding: 10px;
     }
+
+    //-----------------
+    .doctors {
+
+        &__btn {
+            a {
+                font-size: 10px;
+            }
+        }
+       
+    }
+
     
 
 
     
+}
+
+@media (max-width: 359px) {
+
+    .hero-pages {
+        &__header {
+                font-size: 18px;
+        }
+        &__sub-header {
+            font-size: 10px;
+        }
+
+        &__image {
+            img {
+                max-width: 150px;
+            }
+		}
+    }
+    .popup {
+    
+        &__body {
+        }
+
+        &__content {
+            max-width: 260px;
+        }
+    }
 }
 
 
