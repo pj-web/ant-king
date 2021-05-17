@@ -112,6 +112,23 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+h1.anim-items {
+  -webkit-transform: translate(0px, 120%);
+      -ms-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+h1.anim-items.active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
 h2.anim-items {
   -webkit-transform: translate(0px, 120%);
       -ms-transform: translate(0px, 120%);
@@ -1461,6 +1478,23 @@ ul li.footer__item::before {
   font-size: 24px;
 }
 
+.instruction {
+  padding: 40px 0;
+  background-color: #e7e7e7;
+}
+
+.instruction__inner {
+  margin: 0 40px;
+}
+
+.instruction__inner ol {
+  margin: 0px 0px 20px 20px;
+}
+
+.instruction__image {
+  margin-bottom: 20px;
+}
+
 .doctors {
   padding: 60px 0px;
   color: #fff;
@@ -2322,6 +2356,10 @@ ul li.footer__item::before {
     line-height: 10px;
   }
 
+  .instruction__image img {
+    max-width: 300px;
+  }
+
   .doctors__inner {
     margin: 0 20px;
   }
@@ -2364,6 +2402,10 @@ ul li.footer__item::before {
 }
 
 @media (max-width: 380px) {
+  h1 {
+    font-size: 32px;
+  }
+
   h2 {
     font-size: 24px;
     line-height: 26px;
@@ -2784,6 +2826,14 @@ ul li.footer__item::before {
     padding: 10px;
   }
 
+  .instruction__inner {
+    margin: 0 20px;
+  }
+
+  .instruction__image img {
+    max-width: 260px;
+  }
+
   .doctors__btn a {
     font-size: 10px;
   }
@@ -2804,5 +2854,9 @@ ul li.footer__item::before {
 
   .popup__content {
     max-width: 260px;
+  }
+
+  .instruction__image img {
+    max-width: 240px;
   }
 }
