@@ -2233,6 +2233,10 @@ ul li.footer__item::before {
     max-width: 360px;
   }
 
+  .composition__inner {
+    margin: 0 40px;
+  }
+
   .composition__item {
     margin-top: 20px;
   }
