@@ -195,6 +195,10 @@ a {
   color: #ff310b;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 p {
   margin: 0 0 20px 0;
 }
@@ -779,6 +783,7 @@ figure.anim-items.active {
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+  margin: 10px 0 0 0;
 }
 
 .hero-pages__btn-2.active {
@@ -1014,20 +1019,21 @@ figure.anim-items.active {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
-
-.btn-buy a {
-  display: block;
   padding: 25px 41px 25px 41px;
   color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .btn-buy:hover {
-  -webkit-box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.8);
-          box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.8);
+  -webkit-box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.4);
+          box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.4);
   -webkit-transform: translate(0px, -3px);
       -ms-transform: translate(0px, -3px);
           transform: translate(0px, -3px);
+  text-decoration: none;
 }
 
 .btn-buy:active {
@@ -1048,18 +1054,16 @@ figure.anim-items.active {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.btn-consultation a {
-  display: block;
   padding: 25px 20px 25px 20px;
   color: #fff;
+  margin: 20px 0 0 0;
 }
 
 .btn-consultation:hover {
   background: #ff310b;
   -webkit-box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
           box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+  text-decoration: none;
 }
 
 .btn-consultation:active {
@@ -1341,6 +1345,91 @@ ul li.footer__item::before {
   display: none;
 }
 
+.pharmacies {
+  padding: 10px 0;
+  background-color: #e2e2e2;
+}
+
+.pharmacies h2,
+.pharmacies h3 {
+  margin: 10px 0 10px 0;
+}
+
+.pharmacies__items {
+  max-width: 1200px;
+  padding: 0 0 15px 0;
+}
+
+.pharmacies__item {
+  max-width: 1100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.pharmacies__item-title {
+  font-size: 21px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px 20px 40px;
+  position: relative;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.pharmacies__item-title::after {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 67px;
+  background-color: #fff;
+  right: -72px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pharmacies__item-title::before {
+  position: absolute;
+  content: url("../images/pharmacies-arrow.svg");
+  right: -45px;
+  z-index: 5;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.pharmacies__item-title.in::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pharmacies__item-text {
+  padding: 0 5px 75px 50px;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  margin: 0 0 4px;
+  display: none;
+}
+
+.pharmacies__item.pharmacies__item--active .pharmacies__item-title::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pharmacies__item.pharmacies__item--active .pharmacies__item-text {
+  display: block;
+}
+
 .popup {
   position: fixed;
   width: 100%;
@@ -1404,6 +1493,10 @@ ul li.footer__item::before {
   top: 5px;
   font-size: 20px;
   color: #000;
+}
+
+.popup__close:hover {
+  text-decoration: none;
 }
 
 .popup__buy-form {
@@ -1622,6 +1715,44 @@ ul li.footer__item::before {
   padding: 20px 20px 10px 20px;
   margin: 10px 10px 10px 0px;
   border-radius: 15px;
+}
+
+.contacts {
+  padding: 40px 0;
+  background-color: #e7e7e7;
+}
+
+.contacts__inner h3 {
+  text-align: left;
+}
+
+.contacts__map {
+  max-width: 800px;
+  max-height: 400px;
+  margin: 0 0 20px 20px;
+}
+
+.contacts__team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 20px 0;
+}
+
+.contacts__team-item {
+  text-align: center;
+}
+
+.contacts__team-item span {
+  font-size: 14px;
 }
 
 @media (max-width: 1200px) {
@@ -1863,6 +1994,10 @@ ul li.footer__item::before {
     margin: 0 40px;
   }
 
+  .composition__inner {
+    margin: 0 40px;
+  }
+
   .conditions__inner {
     margin: 0 40px;
   }
@@ -1871,8 +2006,16 @@ ul li.footer__item::before {
     margin: 0 60px;
   }
 
-  .conditions__inner {
+  .pharmacies__inner {
     margin: 0 40px;
+  }
+
+  .pharmacies__items {
+    max-width: 1000px;
+  }
+
+  .pharmacies__item {
+    max-width: 900px;
   }
 
   .popup__content {
@@ -1914,9 +2057,23 @@ ul li.footer__item::before {
   .customers__avatar {
     padding: 0px 0 0 25px;
   }
+
+  .contacts__inner {
+    margin: 0 40px;
+  }
+
+  .contacts__team {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .contacts__team-item {
+    width: 50%;
+    margin: 20px 0 0 0;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .countdown__item {
     min-width: 60px;
     border-radius: 10%;
@@ -2293,6 +2450,14 @@ ul li.footer__item::before {
     margin: 0 20px;
   }
 
+  .pharmacies__items {
+    max-width: 700px;
+  }
+
+  .pharmacies__item {
+    max-width: 600px;
+  }
+
   .footer {
     padding: 60px 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#1E1010), to(#000000));
@@ -2398,6 +2563,10 @@ ul li.footer__item::before {
 
   .customers__testimonial {
     margin: 10px 0 0 0;
+  }
+
+  .contacts__team-item {
+    width: 100%;
   }
 }
 
@@ -2779,6 +2948,22 @@ ul li.footer__item::before {
     margin: 0;
   }
 
+  .pharmacies__inner {
+    margin: 0 20px;
+  }
+
+  .pharmacies__items {
+    max-width: 360px;
+  }
+
+  .pharmacies__item {
+    max-width: 260px;
+  }
+
+  .pharmacies__item-text {
+    padding: 10px 10px 10px 10px;
+  }
+
   .popup__content {
     max-width: 300px;
   }
@@ -2837,6 +3022,16 @@ ul li.footer__item::before {
   .doctors__btn a {
     font-size: 10px;
   }
+
+  .contacts__inner {
+    margin: 0 20px;
+  }
+
+  .contacts__map {
+    margin: 0 0 20px 0;
+    max-width: 330px;
+    max-height: 220px;
+  }
 }
 
 @media (max-width: 359px) {
@@ -2852,11 +3047,28 @@ ul li.footer__item::before {
     max-width: 150px;
   }
 
+  .pharmacies__inner {
+    margin: 0 10px;
+  }
+
+  .pharmacies__items {
+    max-width: 320px;
+  }
+
+  .pharmacies__item {
+    max-width: 220px;
+  }
+
   .popup__content {
     max-width: 260px;
   }
 
   .instruction__image img {
     max-width: 240px;
+  }
+
+  .contacts__map {
+    max-width: 280px;
+    max-height: 200px;
   }
 }

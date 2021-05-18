@@ -105,6 +105,10 @@ div.anim-items {
 
 a {
     color: #ff310b;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 
@@ -654,12 +658,12 @@ figure.anim-items {
         &__btn-2 {
             opacity: 0;
             transition: all 0.8s ease 0s;
+            margin: 10px 0 0 0;
 
             &.active {
                 opacity: 1;
                 transition: all 0.8s ease 0.4s;
             }
-
         }
 		
 		&__image {
@@ -911,6 +915,7 @@ figure.anim-items {
 
 
 .btn-buy {
+    
     display: inline-block;
     font-weight: 700;
     font-size: 18px;
@@ -918,23 +923,24 @@ figure.anim-items {
     background: #ff310b;
     border-radius: 5px;
     transition: all 0.5s ease 0s;
+    padding: 25px 41px 25px 41px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
 
-    a {
-        display: block;
-        padding: 25px 41px 25px 41px;
-        color: #fff;
+        &:hover {
+            box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.4);
+            transform: translate(0px, -3px);
+            text-decoration: none;
+        }
+        &:active {
+            box-shadow: none;
+            color: #ff310b;
+            background-color: #fff;
 
     }
 
-    &:hover {
-        box-shadow: 0px 0px 50px rgba(255, 49, 11, 0.8);
-        transform: translate(0px, -3px);
-    }
-    &:active {
-        box-shadow: none;
-        color: #ff310b;
-        background-color: #fff;
-    }
+    
 }
 .btn-consultation {
     display: inline-block;
@@ -945,22 +951,20 @@ figure.anim-items {
     background: transparent;
     border-radius: 5px;
     transition: all 0.3s ease 0s;
-
-    a {
-        display: block;
-        padding: 25px 20px 25px 20px;
-        color: #fff; 
-    }
+    padding: 25px 20px 25px 20px;
+    color: #fff; 
+    margin: 20px 0 0 0;
+    
 
     &:hover {
         background: #ff310b;
         box-shadow: 0px 0px 30px rgba(255, 49, 11, 0.5);
+        text-decoration: none;
     }
     &:active {
         box-shadow: none;
         transform: translate(0px, 3px);
     }
-
 }
 
 .btn-buy-form {
@@ -1287,6 +1291,75 @@ ul li.footer__item::before {
         display: none;
 }
 
+.pharmacies {
+    h2, h3 {
+        margin: 10px 0 10px 0;
+    }
+    padding: 10px 0;
+    background-color: #e2e2e2;
+
+    &__items {
+        max-width: 1200px;
+        padding: 0 0 15px 0;
+    }
+
+    &__item {
+        max-width: 1100px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    &__item-title {
+        font-size: 21px;
+        line-height: 28px;
+        color: rgba(#fff, .8);
+        padding: 20px 10px 20px 40px;
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            right: -72px;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &::before {
+            position: absolute;
+            content: url('../images/pharmacies-arrow.svg');
+            right: -45px;
+            z-index: 5;
+            transition: all .3s;
+         }
+    }
+
+    &__item-title.in::before{
+        transform: rotate(180deg);
+    }
+
+    &__item-text {
+        padding: 0 5px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0;
+        margin: 0 0 4px;
+        display: none;
+    }
+    &__item.pharmacies__item--active {
+        .pharmacies__item-title::after {
+            transform: rotate(180deg);
+        }
+        .pharmacies__item-text {
+            display: block;
+        }
+    }
+}
+
 .popup {
     position: fixed;
     width: 100%;
@@ -1338,6 +1411,10 @@ ul li.footer__item::before {
         top: 5px;
         font-size: 20px;
         color: #000;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     
@@ -1561,6 +1638,41 @@ ul li.footer__item::before {
         margin: 10px 10px 10px 0px;
         border-radius: 15px;
     }
+}
+
+// ---------------------------------------
+
+.container {
+}
+.contacts {
+    padding: 40px 0;
+    background-color: #e7e7e7;
+
+		&__inner {
+            h3 {
+                text-align: left;
+            }
+		}
+
+		&__map {
+            max-width: 800px;
+            max-height: 400px;
+            margin: 0 0 20px 20px;
+		}
+        &__team {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 0 0 20px 0;
+        }
+        &__team-item {
+            text-align: center;
+
+            span {
+                font-size: 14px;
+            }
+        }
 }
 
 // ---------------------------------------
@@ -1905,6 +2017,7 @@ ul li.footer__item::before {
     
 
     &__inner {
+        margin: 0 40px;
     }
 
     &__items {
@@ -1928,10 +2041,19 @@ ul li.footer__item::before {
     }
 }
 
-.conditions {
 
+    .pharmacies {
         &__inner {
             margin: 0 40px;
+        }
+    
+        &__items {
+            max-width: 1000px;
+        }
+    
+        &__item {
+            max-width: 900px;
+            
         }
     }
 
@@ -1997,12 +2119,24 @@ ul li.footer__item::before {
 		&__testimonial {
 		}
 }
-
+    //------------------------------
+    .contacts {
+        &__inner {
+            margin: 0 40px;
+        }
+        &__team {
+            justify-content: space-around;
+        }
+        &__team-item {
+            width: 50%;
+            margin: 20px 0 0 0;
+        }
+    }
 
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .countdown {
         &__item{
@@ -2466,6 +2600,19 @@ ul li.footer__item::before {
             margin: 0 20px;
         }
     }
+    .pharmacies {
+        &__inner {
+        }
+    
+        &__items {
+            max-width: 700px;
+        }
+    
+        &__item {
+            max-width: 600px;
+            
+        }
+    }
 
     .footer {
         padding: 60px 0;
@@ -2607,6 +2754,22 @@ ul li.footer__item::before {
             margin: 10px 0 0 0;
 		}
 }
+ //----------------------
+ .contacts {
+    &__inner {
+
+    }
+    &__team {
+
+    }
+    &__team-item {
+        width: 100%;
+
+    }
+}
+
+ //----------------------
+
 
 
 
@@ -3070,6 +3233,24 @@ ul li.footer__item::before {
         }
     }
 
+    .pharmacies {
+        &__inner {
+            margin: 0 20px;
+        }
+    
+        &__items {
+            max-width: 360px;
+        }
+    
+        &__item {
+            max-width: 260px;
+            
+        }
+        &__item-text {
+            padding: 10px 10px 10px 10px;
+        }
+    }
+
 
     .popup-order {
     }
@@ -3195,6 +3376,29 @@ ul li.footer__item::before {
        
     }
 
+    //------------------
+    
+    .contacts {
+        &__inner {
+            margin: 0 20px;
+    
+        }
+        &__map {
+            margin: 0 0 20px 0;
+            max-width: 330px;
+            max-height: 220px;
+        }
+        &__team {
+    
+        }
+        &__team-item {
+            img {
+            }
+    
+        }
+    }
+    
+
     
 
 
@@ -3217,6 +3421,21 @@ ul li.footer__item::before {
             }
 		}
     }
+    .pharmacies {
+        &__inner {
+            margin: 0 10px;
+         
+        }
+    
+        &__items {
+            max-width: 320px;
+        }
+    
+        &__item {
+            max-width: 220px;
+            
+        }
+    }
     .popup {
     
         &__body {
@@ -3232,6 +3451,24 @@ ul li.footer__item::before {
             img {
                 max-width: 240px;
             }
+        }
+    }
+    //-------------------------
+    .contacts {
+        &__inner {
+    
+        }
+        &__map {
+            max-width: 280px;
+            max-height: 200px;
+        }
+        &__team {
+    
+        }
+        &__team-item {
+            img {
+            }
+    
         }
     }
 }

@@ -209,6 +209,11 @@ document.addEventListener('keydown', function (e) {
     });
     //]]>
 
+    $('.pharmacies__item-title').on('click', function () {
+        $(this).toggleClass('in').next().slideToggle();
+        $('.pharmacies__item-title').not(this).removeClass('in').next().slideUp();
+    });
+
     let animItems = document.querySelectorAll('.anim-items');
 
     if (animItems.length > 0) {
@@ -248,6 +253,21 @@ document.addEventListener('keydown', function (e) {
         setTimeout(() => {
             animOnScroll();
         }, 300);
+    }
+
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.747368, 37.707107],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 15
+        });
     }
 
     
