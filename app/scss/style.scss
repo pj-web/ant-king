@@ -1642,13 +1642,14 @@ ul li.footer__item::before {
 
 // ---------------------------------------
 
-.container {
-}
 .contacts {
     padding: 40px 0;
     background-color: #e7e7e7;
 
 		&__inner {
+            h1 {
+                margin: 0px 0px 40px 0;
+            }
             h3 {
                 text-align: left;
             }
@@ -2602,14 +2603,15 @@ ul li.footer__item::before {
     }
     .pharmacies {
         &__inner {
+            margin: 0 20px;
         }
     
         &__items {
-            max-width: 700px;
+            max-width: 400px;
         }
     
         &__item {
-            max-width: 600px;
+            max-width: 300px;
             
         }
     }
