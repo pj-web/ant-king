@@ -391,6 +391,7 @@ figure.anim-items {
     }
 
     &__item {
+        margin-bottom: 0;
 
         &::before {
             display: none;
@@ -645,7 +646,7 @@ figure.anim-items {
 		}
 
         &__btn-1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             opacity: 0;
             transition: all 0.8s ease 0s;
 
@@ -953,7 +954,6 @@ figure.anim-items {
     transition: all 0.3s ease 0s;
     padding: 25px 20px 25px 20px;
     color: #fff; 
-    margin: 20px 0 0 0;
     
 
     &:hover {
@@ -1642,6 +1642,10 @@ ul li.footer__item::before {
 
 // ---------------------------------------
 
+#map {
+    width: 640px; height: 400px;
+}
+
 .contacts {
     padding: 40px 0;
     background-color: #e7e7e7;
@@ -1656,8 +1660,6 @@ ul li.footer__item::before {
 		}
 
 		&__map {
-            max-width: 800px;
-            max-height: 400px;
             margin: 0 0 20px 20px;
 		}
         &__team {
@@ -2757,7 +2759,15 @@ ul li.footer__item::before {
 		}
 }
  //----------------------
+
+ #map {
+    width: 400px; height: 260px;
+  }
+
  .contacts {
+     &__map {
+         max-width: 300px;
+     }
     &__inner {
 
     }
@@ -3379,7 +3389,10 @@ ul li.footer__item::before {
     }
 
     //------------------
-    
+    #map {
+        width: 300px; height: 300px;
+      }
+
     .contacts {
         &__inner {
             margin: 0 20px;
@@ -3456,6 +3469,10 @@ ul li.footer__item::before {
         }
     }
     //-------------------------
+    
+    #map {
+        width: 260px; height: 300px;
+      }
     .contacts {
         &__inner {
     

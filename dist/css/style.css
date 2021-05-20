@@ -481,6 +481,10 @@ figure.anim-items.active {
   margin: auto auto;
 }
 
+.menu__item {
+  margin-bottom: 0;
+}
+
 .menu__item::before {
   display: none;
 }
@@ -764,7 +768,7 @@ figure.anim-items.active {
 }
 
 .hero-pages__btn-1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   opacity: 0;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
@@ -1056,7 +1060,6 @@ figure.anim-items.active {
   transition: all 0.3s ease 0s;
   padding: 25px 20px 25px 20px;
   color: #fff;
-  margin: 20px 0 0 0;
 }
 
 .btn-consultation:hover {
@@ -1717,6 +1720,11 @@ ul li.footer__item::before {
   border-radius: 15px;
 }
 
+#map {
+  width: 640px;
+  height: 400px;
+}
+
 .contacts {
   padding: 40px 0;
   background-color: #e7e7e7;
@@ -1731,8 +1739,6 @@ ul li.footer__item::before {
 }
 
 .contacts__map {
-  max-width: 800px;
-  max-height: 400px;
   margin: 0 0 20px 20px;
 }
 
@@ -2573,6 +2579,15 @@ ul li.footer__item::before {
     margin: 10px 0 0 0;
   }
 
+  #map {
+    width: 400px;
+    height: 260px;
+  }
+
+  .contacts__map {
+    max-width: 300px;
+  }
+
   .contacts__team-item {
     width: 100%;
   }
@@ -3031,6 +3046,11 @@ ul li.footer__item::before {
     font-size: 10px;
   }
 
+  #map {
+    width: 300px;
+    height: 300px;
+  }
+
   .contacts__inner {
     margin: 0 20px;
   }
@@ -3073,6 +3093,11 @@ ul li.footer__item::before {
 
   .instruction__image img {
     max-width: 240px;
+  }
+
+  #map {
+    width: 260px;
+    height: 300px;
   }
 
   .contacts__map {

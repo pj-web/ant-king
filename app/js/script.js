@@ -266,7 +266,8 @@ document.addEventListener('keydown', function (e) {
             center: [55.747368, 37.707107],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 15
+            zoom: 15,
+            behaviors: ['drag']
         });
     }
 
