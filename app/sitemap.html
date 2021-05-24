@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,300;1,500&display=swap" rel="stylesheet">
-    <meta name="description" content="Вакансии в фирме Ant King">
-    <title>Вакансии в Ant King</title>
+    <meta name="description" content="Карта сайта">
+    <title>Карта сайта</title>
+    @@include('_yandex-google.html')
 </head>
 <body>
     <div class="wrapper">
@@ -75,7 +76,7 @@
                                     </div>
                                 </div>
                                 <div class="popup__buy-form">
-                                    <form id="orderly" class="offername" action="https://antking-official.ru/order.php" method="POST">
+                                    <form class="offername" action="https://antking-official.ru/order.php" method="POST">
                                         <input name="name" required type="text" placeholder="Имя" />
                                         <input name="phone" required type="tel" placeholder="Телефон" />
                                         <button class="btn-buy-form" type="submit">Купить по акции</button>
@@ -96,7 +97,7 @@
                                     <p>заполните пожалуйста форму ниже:</p>
                                 </div>
                                 <div class="popup__buy-form">
-                                    <form id="orderly" class="offername" action="https://antking-official.ru/order.php" method="POST">
+                                    <form class="offername" action="https://antking-official.ru/order.php" method="POST">
                                         <input name="name" required type="text" placeholder="Имя" />
                                         <input name="phone" required type="tel" placeholder="Телефон" />
                                         <button class="btn-buy-form" type="submit">Подучить консультацию</button>
@@ -113,8 +114,6 @@
         </main>
         @@include('_footer.html')
     </div>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
